@@ -30,5 +30,5 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-Sitemap: https://github.com/freejbgo/speedce.com/blob/main/sitemap.xml
+Sitemap: https://freejbgo.github.io/speedce.com/sitemap.xml
 Sitemap: https://www.speedce.com/sitemap.xml
