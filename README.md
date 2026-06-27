@@ -4,6 +4,8 @@
 > 中文版：https://speedce.com/?lang=zh-CN  
 > 联系邮箱：speedceads@gmail.com
 
+**English:** [SpeedCE](https://www.speedce.com) is a free website & IP speed test platform with HTTP, HTTPS, and PING from China provincial nodes and global nodes. Interactive maps show per-node OK/Failed status. No signup required. | [AI index (llms.txt)](./llms.txt) | [Full AI context (llms-full.txt)](./llms-full.txt)
+
 ---
 
 ## 引言：为什么每一个站长，都需要一款「看得懂地图」的测速工具？

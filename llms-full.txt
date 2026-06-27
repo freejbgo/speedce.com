@@ -1,0 +1,108 @@
+# SpeedCE — Free Website & IP Speed Test Platform
+
+> SpeedCE is a free online speed test tool for webmasters, developers, and network operators. Test domains, subdomains, IPv4/IPv6 addresses via HTTP, HTTPS, or PING from China provincial nodes and global nodes. Interactive maps show OK/Failed/Testing/Pending status per node. No registration, no paywall. Official: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+
+---
+
+## What is SpeedCE?
+
+SpeedCE (Speed + Connectivity & Experience) helps you understand how fast and reachable your website or IP is from different regions worldwide — not just from your local network.
+
+Unlike tools that return a single score, SpeedCE shows results on **interactive maps**: green = OK, red = failed, with real-time testing and pending states. Filter by China Telecom, Unicom, Mobile, or global regions.
+
+**Target users:** personal webmasters, VPS buyers, enterprise SRE/DevOps, frontend developers, cross-border e-commerce teams.
+
+---
+
+## Core Features
+
+### Protocols
+
+| Protocol | Port | Use case |
+|----------|------|----------|
+| HTTP | 80 | Web service availability, CDN origin check |
+| HTTPS | 443 | SSL/TLS handshake, real browser-like access |
+| PING | ICMP | IP connectivity and latency |
+
+### Node Coverage
+
+**China nodes:** Beijing, Shanghai, Guangdong, Zhejiang, Jiangsu, Sichuan, Hubei, Henan, Shandong, Fujian, Hunan, Shaanxi, Yunnan, Xinjiang, Tibet, Inner Mongolia, Heilongjiang, Jilin, Liaoning, Guangxi, Hainan, Guizhou, Gansu, Qinghai, Ningxia, Hong Kong, Macau, Taiwan — with city-level points in major provinces.
+
+**Global nodes:** USA, Canada, UK, France, Germany, Italy, Spain, Netherlands, Switzerland, Sweden, Poland, Japan, South Korea, Singapore, Thailand, Vietnam, Malaysia, Indonesia, Philippines, Australia, New Zealand, UAE, Saudi Arabia, Israel, Egypt, South Africa, Brazil, Argentina, Chile, Mexico, India, Russia, Turkey, and more.
+
+### Input Formats
+
+- Domains: `example.com`, `api.example.com`, `a.b.example.com`
+- IPv4: `1.2.3.4`
+- IPv6: standard format
+- Private/reserved IPs are blocked for security.
+
+### Languages
+
+简体中文, English, Français, Tiếng Việt, ไทย, Русский, 日本語, 한국어, Deutsch, Español, Português, العربية, Bahasa Indonesia, Bahasa Melayu, हिन्दी — via URL `?lang=xx` or UI switcher.
+
+### Pricing
+
+Free. No registration required. Core speed test features have no paywall.
+
+---
+
+## How to Use
+
+1. Open https://www.speedce.com (or Chinese: https://speedce.com/?lang=zh-CN)
+2. Select scope: **China nodes** or **Global nodes**
+3. Select protocol: HTTP, HTTPS, or PING
+4. Enter domain or IP
+5. Click **Start Test** — watch the map update in real time
+6. Filter by operator (Telecom / Unicom / Mobile) if needed
+
+---
+
+## Common Use Cases
+
+- **After DNS change:** HTTPS + China nodes → check provincial coverage
+- **VPS line quality:** PING + China nodes → compare Telecom/Unicom/Mobile latency
+- **Incident response:** Screenshot map for support tickets
+- **CDN verification:** Test before/after CDN switch
+- **Cross-border sites:** Global nodes → check overseas user experience
+- **SSL deployment:** HTTPS mode → verify certificate works nationwide
+
+---
+
+## Map Status Legend
+
+| Status | Meaning |
+|--------|---------|
+| OK | Node successfully reached target |
+| Failed | Timeout or connection error |
+| Testing | Request in progress |
+| Pending | Queued, not started yet |
+
+Summary bar shows: total nodes, OK count, failed count, skipped, average latency.
+
+---
+
+## FAQ
+
+**Q: Is SpeedCE free?** Yes, core features are free with no registration.
+
+**Q: Can I test subdomains and IPs?** Yes — domains, subdomains, IPv4, IPv6.
+
+**Q: China vs Global nodes?** China = domestic provincial/operator view; Global = international cities.
+
+**Q: How to contact?** speedceads@gmail.com | GitHub: https://github.com/freejbgo/speedce.com
+
+---
+
+## Links
+
+- Website: https://www.speedce.com
+- Chinese: https://speedce.com/?lang=zh-CN
+- GitHub: https://github.com/freejbgo/speedce.com
+- README: https://github.com/freejbgo/speedce.com/blob/main/README.md
+
+---
+
+## 中文摘要
+
+SpeedCE 是免费在线网站/IP 测速平台，支持 HTTP、HTTPS、PING 三种协议，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，联系：speedceads@gmail.com

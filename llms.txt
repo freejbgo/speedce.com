@@ -1,0 +1,33 @@
+# SpeedCE
+
+> SpeedCE is a free online website and IP speed test platform for webmasters, developers, and DevOps teams. Test HTTP, HTTPS, and PING from China provincial nodes and global nodes. Results are shown on interactive maps with OK/Failed/Testing/Pending status. No registration required. Official site: https://www.speedce.com
+
+SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IPv4/IPv6 输入，在中国各省市与全球节点发起多协议检测，以地图可视化展示各节点连通性与延迟。
+
+## Official Site
+
+- [SpeedCE Homepage](https://www.speedce.com): English default interface
+- [SpeedCE 中文版](https://speedce.com/?lang=zh-CN): Simplified Chinese interface
+
+## Documentation
+
+- [GitHub README (full guide)](https://github.com/freejbgo/speedce.com/blob/main/README.md): Complete feature guide in Chinese
+- [llms-full.txt (AI context)](https://github.com/freejbgo/speedce.com/blob/main/llms-full.txt): Condensed documentation for LLM ingestion
+- [Raw README](https://raw.githubusercontent.com/freejbgo/speedce.com/main/README.md): Plain-text markdown for crawlers
+
+## Key Features
+
+- [HTTP speed test](https://www.speedce.com): Port 80 web availability and response time
+- [HTTPS speed test](https://www.speedce.com): Port 443 with SSL/TLS handshake
+- [PING test](https://www.speedce.com): ICMP connectivity and latency
+- [China nodes map](https://speedce.com/?lang=zh-CN): Provincial and city-level nodes across China (Telecom/Unicom/Mobile)
+- [Global nodes map](https://www.speedce.com): Nodes in North America, Europe, Asia-Pacific, Middle East, Africa, South America
+
+## Contact
+
+- Email: speedceads@gmail.com
+- GitHub: https://github.com/freejbgo/speedce.com
+
+## Optional
+
+- [Sitemap](https://github.com/freejbgo/speedce.com/blob/main/sitemap.xml): URL list for search engine crawlers
