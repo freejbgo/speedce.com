@@ -1,6 +1,6 @@
 # SpeedCE — Free Website & IP Speed Test Platform
 
-> SpeedCE is a free online speed test tool for webmasters, developers, and network operators. Test domains, subdomains, IPv4/IPv6 addresses via HTTP, HTTPS, or PING from China provincial nodes and global nodes. Interactive maps show OK/Failed/Testing/Pending status per node. No registration, no paywall. Official: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+> SpeedCE is a free online speed test tool for webmasters, developers, and network operators. Test domains, subdomains, IPv4/IPv6 addresses via six tools—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—from China provincial nodes and global nodes. Interactive maps show OK/Failed/Testing/Pending status per node. DNS and Traceroute include detailed result panels. No registration, no paywall. Official: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
 
 ---
 
@@ -8,7 +8,7 @@
 
 SpeedCE (Speed + Connectivity & Experience) helps you understand how fast and reachable your website or IP is from different regions worldwide — not just from your local network.
 
-Unlike tools that return a single score, SpeedCE shows results on **interactive maps**: green = OK, red = failed, with real-time testing and pending states. Filter by China Telecom, Unicom, Mobile, or global regions.
+Unlike tools that return a single score, SpeedCE shows results on **interactive maps**: green = OK, red = failed, with real-time testing and pending states. Filter by China Telecom, Unicom, Mobile, or global regions. Select the detection tool from a **dropdown menu** on the test form.
 
 **Target users:** personal webmasters, VPS buyers, enterprise SRE/DevOps, frontend developers, cross-border e-commerce teams.
 
@@ -16,13 +16,16 @@ Unlike tools that return a single score, SpeedCE shows results on **interactive 
 
 ## Core Features
 
-### Protocols
+### Detection Tools (dropdown)
 
-| Protocol | Port | Use case |
-|----------|------|----------|
-| HTTP | 80 | Web service availability, CDN origin check |
-| HTTPS | 443 | SSL/TLS handshake, real browser-like access |
-| PING | ICMP | IP connectivity and latency |
+| Tool | Description |
+|------|-------------|
+| HTTP | Port 80 web availability and response time |
+| HTTPS | Port 443 with SSL/TLS handshake, browser-like access |
+| PING | ICMP connectivity and latency |
+| TCPing | TCP port connectivity (custom port; works when ping is blocked) |
+| DNS | Query DNS records from each node (domain only); types: A, AAAA, CNAME, MX, TXT, NS |
+| Traceroute | Hop-by-hop route from one selected probe node; optional MTR mode for loss/latency stats |
 
 ### Node Coverage
 
@@ -35,6 +38,7 @@ Unlike tools that return a single score, SpeedCE shows results on **interactive 
 - Domains: `example.com`, `api.example.com`, `a.b.example.com`
 - IPv4: `1.2.3.4`
 - IPv6: standard format
+- DNS mode: domain names only
 - Private/reserved IPs are blocked for security.
 
 ### Languages
@@ -51,21 +55,24 @@ Free. No registration required. Core speed test features have no paywall.
 
 1. Open https://www.speedce.com (or Chinese: https://speedce.com/?lang=zh-CN)
 2. Select scope: **China nodes** or **Global nodes**
-3. Select protocol: HTTP, HTTPS, or PING
-4. Enter domain or IP
-5. Click **Start Test** — watch the map update in real time
-6. Filter by operator (Telecom / Unicom / Mobile) if needed
+3. Select tool from dropdown: HTTP, HTTPS, PING, TCPing, DNS, or Traceroute
+4. For TCPing: enter port; for DNS: choose record type; for Traceroute: select probe node (optional MTR mode)
+5. Enter domain or IP
+6. Click **Start Test** — watch the map update in real time
+7. Filter by operator (Telecom / Unicom / Mobile) if needed
 
 ---
 
 ## Common Use Cases
 
-- **After DNS change:** HTTPS + China nodes → check provincial coverage
+- **After DNS change:** DNS + China nodes → check record consistency across provinces
 - **VPS line quality:** PING + China nodes → compare Telecom/Unicom/Mobile latency
+- **Ping blocked server:** TCPing + custom port → verify port is open
 - **Incident response:** Screenshot map for support tickets
-- **CDN verification:** Test before/after CDN switch
+- **CDN verification:** Test before/after CDN switch (HTTPS + DNS)
 - **Cross-border sites:** Global nodes → check overseas user experience
 - **SSL deployment:** HTTPS mode → verify certificate works nationwide
+- **Slow route diagnosis:** Traceroute from selected node → find bottleneck hops
 
 ---
 
@@ -80,13 +87,18 @@ Free. No registration required. Core speed test features have no paywall.
 
 Summary bar shows: total nodes, OK count, failed count, skipped, average latency.
 
+DNS detail panel: per-node records, TTL, query time, consistency across nodes.
+Traceroute detail panel: hop list, RTT, optional MTR loss/latency columns.
+
 ---
 
 ## FAQ
 
 **Q: Is SpeedCE free?** Yes, core features are free with no registration.
 
-**Q: Can I test subdomains and IPs?** Yes — domains, subdomains, IPv4, IPv6.
+**Q: Can I test subdomains and IPs?** Yes — domains, subdomains, IPv4, IPv6 (DNS mode: domains only).
+
+**Q: What tools are available?** HTTP, HTTPS, PING, TCPing, DNS, Traceroute — select from the dropdown on the test form.
 
 **Q: China vs Global nodes?** China = domestic provincial/operator view; Global = international cities.
 
@@ -105,4 +117,4 @@ Summary bar shows: total nodes, OK count, failed count, skipped, average latency
 
 ## 中文摘要
 
-SpeedCE 是免费在线网站/IP 测速平台，支持 HTTP、HTTPS、PING 三种协议，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，联系：speedceads@gmail.com
+SpeedCE 是免费在线网站/IP 测速平台，通过下拉菜单提供 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测工具，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态；DNS 模式汇总各节点解析一致性，路由追踪支持 MTR 丢包统计。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，联系：speedceads@gmail.com

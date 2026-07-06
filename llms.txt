@@ -1,8 +1,8 @@
 # SpeedCE
 
-> SpeedCE is a free online website and IP speed test platform for webmasters, developers, and DevOps teams. Test HTTP, HTTPS, and PING from China provincial nodes and global nodes. Results are shown on interactive maps with OK/Failed/Testing/Pending status. No registration required. Official site: https://www.speedce.com
+> SpeedCE is a free online website and IP speed test platform for webmasters, developers, and DevOps teams. Six tools—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—from China provincial nodes and global nodes. Results are shown on interactive maps with OK/Failed/Testing/Pending status. No registration required. Official site: https://www.speedce.com
 
-SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IPv4/IPv6 输入，在中国各省市与全球节点发起多协议检测，以地图可视化展示各节点连通性与延迟。
+SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IPv4/IPv6 输入，通过下拉菜单选择六种检测工具，在中国各省市与全球节点发起多协议检测，以地图可视化展示各节点连通性与延迟。
 
 ## Official Site
 
@@ -21,6 +21,9 @@ SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IP
 - [HTTP speed test](https://www.speedce.com): Port 80 web availability and response time
 - [HTTPS speed test](https://www.speedce.com): Port 443 with SSL/TLS handshake
 - [PING test](https://www.speedce.com): ICMP connectivity and latency
+- [TCPing test](https://www.speedce.com): TCP port connectivity (custom port; works when ping is blocked)
+- [DNS lookup](https://www.speedce.com): Query A/AAAA/CNAME/MX/TXT/NS records from each node (domain only)
+- [Traceroute](https://www.speedce.com): Hop-by-hop route from selected node; optional MTR mode
 - [China nodes map](https://speedce.com/?lang=zh-CN): Provincial and city-level nodes across China (Telecom/Unicom/Mobile)
 - [Global nodes map](https://www.speedce.com): Nodes in North America, Europe, Asia-Pacific, Middle East, Africa, South America
 
