@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Practical Guide — SpeedCE Docs</title><style>
+body{font-family:system-ui,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;line-height:1.65;color:#1a1a1a}
+a{color:#0969da} nav{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #e5e7eb;font-size:.9rem}
+nav a{margin-right:1rem} h1{font-size:1.6rem} table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #e5e7eb;padding:.5rem .75rem;text-align:left} th{background:#f6f8fa}
+code{background:#f6f8fa;padding:.1rem .3rem;border-radius:3px} pre{background:#f6f8fa;padding:1rem;overflow:auto}
+blockquote{border-left:4px solid #0969da;margin:1rem 0;padding:.5rem 1rem;color:#444;background:#f6f8fa}
+</style></head><body><nav><a href="../index.html">← SpeedCE Home</a><a href="index.html">Docs</a></nav><h1>网站慢、打不开、部分用户访问异常？站长多节点测速实战手册（SpeedCE 实操版）</h1>
+<blockquote>
+<p>工具地址：https://www.speedce.com<br />
+中文界面：https://speedce.com/?lang=zh-CN<br />
+联系：speedceads@gmail.com<br />
+更新时间：2026 年 7 月</p>
+</blockquote>
+<hr />
+<h2>写在前面：90% 的「网站问题」，都是你以为没问题</h2>
+<p>做网站的人，几乎都说过这句话：</p>
+<blockquote>
+<p>「我这边打开好好的啊。」</p>
+</blockquote>
+<p>问题的本质不是用户挑剔，而是<strong>测速方法错了</strong>——你在公司 Wi-Fi 上测一次，只能代表你公司那条宽带；你在服务器上 <code>curl localhost</code>，只能代表机器内部。</p>
+<p>真正靠谱的做法：</p>
+<p><strong>从全国各地、全球各地、不同运营商的远端节点，向你的目标发起真实访问，把结果画在地图上。</strong></p>
+<p>本文是一份<strong>可照着做的实战手册</strong>。全文以 <strong>SpeedCE</strong> 为操作示例——它现已通过下拉菜单提供 <strong>HTTP、HTTPS、PING、TCPing、DNS、路由追踪</strong> 六种工具，覆盖从 DNS 解析、端口连通到 Web 可用性的完整排查链路。</p>
+<hr />
+<h2>第一章：先建立正确观念——六种工具，测的不是一回事</h2>
+<p>动手之前，先分清 SpeedCE 下拉菜单里的六种检测工具各自回答什么问题。</p>
+<h3>1.1 PING —— 网络层通不通？</h3>
+<p>PING 使用 ICMP 协议，回答：<strong>从检测节点到你的 IP，网络层通不通？延迟多少毫秒？</strong></p>
+<ul>
+<li><strong>适合</strong>：VPS 验线路、判断网络层 vs 应用层故障</li>
+<li><strong>局限</strong>：很多云服务器禁 Ping；PING 通不代表网站能打开</li>
+</ul>
+<h3>1.2 HTTP / HTTPS —— Web 服务能不能响应？</h3>
+<p>HTTP(S) 模拟真实用户访问：建立 TCP、（HTTPS 下）TLS 握手、等待响应。</p>
+<ul>
+<li><strong>适合</strong>：网站上线验收、证书验证、CDN 回源检查</li>
+<li><strong>日常首选</strong>：<strong>HTTPS</strong></li>
+</ul>
+<h3>1.3 TCPing —— 禁 Ping 时，端口开不开？</h3>
+<p>TCPing 向<strong>指定 TCP 端口</strong>发起连接，不依赖 ICMP。</p>
+<ul>
+<li><strong>适合</strong>：云服务器禁 Ping、验证 22/443/3389 等端口</li>
+<li><strong>操作</strong>：选择 TCPing → 填写端口号 → 输入 IP</li>
+</ul>
+<h3>1.4 DNS —— 全国各地解析一致吗？</h3>
+<p>DNS 模式从各检测节点查询域名记录（A / AAAA / CNAME / MX / TXT / NS），并统计<strong>解析一致性</strong>。</p>
+<ul>
+<li><strong>适合</strong>：改 DNS 后验收、排查部分地区解析到旧 IP</li>
+<li><strong>注意</strong>：仅支持域名，不支持直接输入 IP</li>
+</ul>
+<h3>1.5 路由追踪 —— 慢在哪一跳？</h3>
+<p>从<strong>选定单个节点</strong>向目标进行 Traceroute，可选 <strong>MTR 模式</strong>查看丢包与延迟统计。</p>
+<ul>
+<li><strong>适合</strong>：跨省/跨境慢、定位路由瓶颈</li>
+<li><strong>操作</strong>：选择路由追踪 → 选择探测节点 → 可选 MTR</li>
+</ul>
+<h3>1.6 多节点测速 —— 把偏见变成全景</h3>
+<p>单点测速有地理偏见。SpeedCE 的「中国节点」覆盖各省三网，「全球节点」覆盖数十国城市，结果以<strong>地图红绿分布</strong>呈现。</p>
+<hr />
+<h2>第二章：SpeedCE 五分钟上手</h2>
+<p>打开 https://speedce.com/?lang=zh-CN ，跟着做一遍。</p>
+<h3>步骤 1：选范围</h3>
+<table>
+<thead>
+<tr>
+<th>业务</th>
+<th>先选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>主要用户在国内</td>
+<td><strong>中国节点</strong></td>
+</tr>
+<tr>
+<td>外贸、出海</td>
+<td><strong>全球节点</strong></td>
+</tr>
+<tr>
+<td>不确定</td>
+<td>先中国，再全球</td>
+</tr>
+</tbody>
+</table>
+<h3>步骤 2：选工具（下拉菜单）</h3>
+<table>
+<thead>
+<tr>
+<th>你想知道</th>
+<th>选</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IP 通不通</td>
+<td>PING</td>
+</tr>
+<tr>
+<td>网站能不能打开</td>
+<td>HTTPS</td>
+</tr>
+<tr>
+<td>禁 Ping、测端口</td>
+<td>TCPing（填端口）</td>
+</tr>
+<tr>
+<td>DNS 是否一致</td>
+<td>DNS（选记录类型）</td>
+</tr>
+<tr>
+<td>慢在哪一跳</td>
+<td>路由追踪（选节点）</td>
+</tr>
+</tbody>
+</table>
+<h3>步骤 3：输入目标</h3>
+<p>支持主域名、子域名、IPv4、IPv6（DNS 模式仅域名）。</p>
+<h3>步骤 4：看地图与统计</h3>
+<p>关注：<strong>通畅数、异常数、平均延迟</strong>；按电信/联通/移动筛选判断单网故障。</p>
+<hr />
+<h2>第三章：十大高频故障场景</h2>
+<h3>场景 1：刚买 VPS，验证商家线路</h3>
+<ol>
+<li><strong>PING</strong> + 中国节点 + 三网筛选；</li>
+<li>Ping 不通改 <strong>TCPing 443</strong>；</li>
+<li>截图地图发帖，比「我本地 ping 20ms」有说服力。</li>
+</ol>
+<h3>场景 2：迁机 / 换 DNS 后验收</h3>
+<ol>
+<li><strong>HTTPS</strong> + 中国节点，测域名；</li>
+<li>配合 <strong>DNS</strong> 模式查 A 记录，看是否「全部节点一致」；</li>
+<li>隔 10 分钟复测 3 次，观察异常是否减少。</li>
+</ol>
+<h3>场景 3：CDN 回源 vs 节点问题</h3>
+<table>
+<thead>
+<tr>
+<th>CDN 域名 (HTTPS)</th>
+<th>源站 (HTTPS)</th>
+<th>判断</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>红</td>
+<td>绿</td>
+<td>CDN 问题</td>
+</tr>
+<tr>
+<td>绿</td>
+<td>红</td>
+<td>源站问题</td>
+</tr>
+<tr>
+<td>红</td>
+<td>红</td>
+<td>先修源站</td>
+</tr>
+</tbody>
+</table>
+<h3>场景 4：微信 / QQ 打不开</h3>
+<p>SpeedCE 做 <strong>HTTPS + 中国节点</strong> 排除服务器问题；若全绿，更可能是微信/QQ 拦截，需 BOCE 等专项工具。</p>
+<h3>场景 5：HTTPS 证书过期</h3>
+<p><strong>HTTPS</strong> 大面积红、<strong>HTTP</strong> 正常 → 高度怀疑证书；续签后复测至地图转绿。</p>
+<h3>场景 6：主站正常、API 挂了</h3>
+<p>分别 <strong>HTTPS</strong> 测 <code>www</code> 与 <code>api</code> 子域，对比两张地图。</p>
+<h3>场景 7：海外慢、国内正常</h3>
+<p><strong>HTTPS + 全球节点</strong>；若欧美红、国内绿 → 考虑海外 CDN / 镜像。</p>
+<h3>场景 8：间歇性故障</h3>
+<p><strong>HTTPS + 中国节点</strong>，每 15 分钟测一次，连续 6 次，记录通畅率波动。</p>
+<h3>场景 9：DNS 切换后部分用户仍访问旧 IP（新增）</h3>
+<ol>
+<li><strong>DNS</strong> + 中国节点，查 A 记录；</li>
+<li>详情面板显示「存在 N 种解析结果」→ 局部 DNS 缓存未刷新；</li>
+<li>降低 TTL 后复测至「全部节点一致」。</li>
+</ol>
+<h3>场景 10：禁 Ping 的 VPS 不确定是否存活（新增）</h3>
+<ol>
+<li><strong>TCPing</strong> + 端口 443 + 中国节点；</li>
+<li>地图多数绿色 → 服务正常，仅禁 ICMP；</li>
+<li>若 TCPing 也失败 → 查安全组、防火墙。</li>
+</ol>
+<hr />
+<h2>第四章：进阶技巧</h2>
+<h3>4.1 三网分离体检法</h3>
+<p>每月固定一天：HTTPS + 中国节点，分别筛选电信/联通/移动，三张截图存档。</p>
+<h3>4.2 迁机前后对比法</h3>
+<p>迁机前测一次，DNS 生效后再测一次，两张地图叠在一起汇报。</p>
+<h3>4.3 子域清单巡检法</h3>
+<pre><code>www.example.com
+api.example.com
+cdn.example.com
+</code></pre>
+<p>每月 <strong>HTTPS + DNS(A)</strong> 各过一遍。</p>
+<h3>4.4 路由追踪定位慢跳（新增）</h3>
+<p>某省 HTTPS 慢但 PING 正常时，从该省节点发起 <strong>路由追踪（MTR）</strong>，看哪一跳延迟飙升。</p>
+<hr />
+<h2>第五章：SpeedCE 在工具链中的位置</h2>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>推荐</th>
+<th>SpeedCE 角色</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>快速看全国/全球通不通</td>
+<td><strong>SpeedCE</strong></td>
+<td>主力</td>
+</tr>
+<tr>
+<td>DNS 解析一致性</td>
+<td><strong>SpeedCE DNS</strong></td>
+<td>主力</td>
+</tr>
+<tr>
+<td>禁 Ping 验端口</td>
+<td><strong>SpeedCE TCPing</strong></td>
+<td>主力</td>
+</tr>
+<tr>
+<td>路由瓶颈定位</td>
+<td><strong>SpeedCE 路由追踪</strong></td>
+<td>主力</td>
+</tr>
+<tr>
+<td>持续 Ping 监控</td>
+<td>ITDOG</td>
+<td>互补</td>
+</tr>
+<tr>
+<td>QQ/微信拦截、备案</td>
+<td>BOCE</td>
+<td>互补</td>
+</tr>
+<tr>
+<td>页面性能评分</td>
+<td>PageSpeed</td>
+<td>互补</td>
+</tr>
+<tr>
+<td>7×24 告警</td>
+<td>UptimeRobot</td>
+<td>互补</td>
+</tr>
+</tbody>
+</table>
+<p><strong>分工记忆：</strong></p>
+<ul>
+<li>SpeedCE：<strong>各地能不能访问、DNS 是否一致、端口开不开、慢在哪一跳</strong></li>
+<li>PageSpeed：<strong>页面代码优化得好不好</strong></li>
+<li>BOCE：<strong>合规检测与长期监控</strong></li>
+</ul>
+<hr />
+<h2>第六章：网站上线前检查清单</h2>
+<ul>
+<li>[ ] HTTPS + 中国节点：主域名通畅率 ≥ 95%</li>
+<li>[ ] 电信 / 联通 / 移动分别目测无大面积异常</li>
+<li>[ ] HTTPS + 全球节点：目标市场国家通畅</li>
+<li>[ ] DNS 模式：A 记录解析一致性为「全部节点一致」</li>
+<li>[ ] TCPing 443：禁 Ping 时确认端口可达</li>
+<li>[ ] 关键子域（api / cdn）单独 HTTPS 测过</li>
+<li>[ ] 证书有效期 &gt; 30 天</li>
+<li>[ ] 地图截图已存档</li>
+</ul>
+<p><strong>工具：</strong> https://speedce.com/?lang=zh-CN</p>
+<hr />
+<h2>第七章：常见误区</h2>
+<ol>
+<li><strong>「我 ping 通了就没问题」</strong> — 错，Web/证书/WAF 任一环节出错用户照样打不开</li>
+<li><strong>「无痕模式能开，用户也该能开」</strong> — 错，你只代表一条宽带</li>
+<li><strong>「测一次就够了」</strong> — 错，DNS 有缓存，网络有抖动</li>
+<li><strong>「出了问题先换服务器」</strong> — 错，先用六种工具定位层级</li>
+</ol>
+<hr />
+<h2>附录：SpeedCE 快速参考卡</h2>
+<pre><code>┌──────────────────────────────────────────────────┐
+│  SpeedCE 快速参考（2026.07）                       │
+├──────────────────────────────────────────────────┤
+│  官网    https://www.speedce.com                  │
+│  中文    https://speedce.com/?lang=zh-CN          │
+├──────────────────────────────────────────────────┤
+│  验 VPS 线路     PING + 中国节点 + 三网筛选        │
+│  禁 Ping 验端口  TCPing + 443 + 中国节点           │
+│  验网站上线      HTTPS + 中国节点 + 主域名         │
+│  验 DNS 生效     DNS(A) + 中国节点 + 看一致性      │
+│  验慢在哪一跳    路由追踪 + 选省份节点 + MTR       │
+│  验 CDN          CDN 域名 vs 源站 HTTPS 对照       │
+│  验出海          HTTPS + 全球节点                   │
+├──────────────────────────────────────────────────┤
+│  地图绿色=通畅  红色=异常  先看范围再看运营商      │
+└──────────────────────────────────────────────────┘
+</code></pre>
+<hr />
+<p><em>本文档为 SpeedCE 实战推广文，适用于 SEO 长尾词「网站打不开怎么办」「在线测速教程」「VPS 线路测试」等场景。转载请注明出处与官网链接。</em></p></body></html>

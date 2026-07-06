@@ -1,0 +1,398 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Tool Comparison 2026 — SpeedCE Docs</title><style>
+body{font-family:system-ui,sans-serif;max-width:800px;margin:2rem auto;padding:0 1rem;line-height:1.65;color:#1a1a1a}
+a{color:#0969da} nav{margin-bottom:2rem;padding-bottom:1rem;border-bottom:1px solid #e5e7eb;font-size:.9rem}
+nav a{margin-right:1rem} h1{font-size:1.6rem} table{border-collapse:collapse;width:100%;margin:1rem 0}
+th,td{border:1px solid #e5e7eb;padding:.5rem .75rem;text-align:left} th{background:#f6f8fa}
+code{background:#f6f8fa;padding:.1rem .3rem;border-radius:3px} pre{background:#f6f8fa;padding:1rem;overflow:auto}
+blockquote{border-left:4px solid #0969da;margin:1rem 0;padding:.5rem 1rem;color:#444;background:#f6f8fa}
+</style></head><body><nav><a href="../index.html">← SpeedCE Home</a><a href="index.html">Docs</a></nav><h1>2026 在线网站测速工具横评：ITDOG、BOCE、17CE、SpeedCE 等 10 款主流平台深度对比</h1>
+<blockquote>
+<p>更新时间：2026 年 7 月<br />
+测试场景：网站可用性、多节点 Ping、DNS、TCPing、路由追踪、国内三网、全球节点<br />
+说明：本文基于各工具官网公开功能及实际页面体验整理，结论随产品迭代可能变化。</p>
+</blockquote>
+<hr />
+<h2>一、为什么 2026 年还要做网站测速工具横评？</h2>
+<p>站长和运维面对的问题越来越碎：</p>
+<ul>
+<li>VPS 商家宣传「CN2」「精品网」，需要<strong>独立第三方</strong>验证；</li>
+<li>业务出海，要同时看<strong>国内与海外</strong>；</li>
+<li>故障时老板要<strong>一张能看懂的图</strong>，不是五百行表格；</li>
+<li>改 DNS、禁 Ping、路由绕行——需要 <strong>DNS / TCPing / Traceroute</strong> 而不只是 Ping。</li>
+</ul>
+<p>本文选取 <strong>10 款</strong> 主流工具，从功能广度、节点覆盖、结果呈现、免费策略、上手成本六个维度对比。</p>
+<p><strong>入选工具：</strong> SpeedCE、ITDOG、BOCE、17CE、VSPING、CESU、站长之家 Ping、Ping.pe、阿里云运维检测、Google PageSpeed Insights</p>
+<hr />
+<h2>二、横评维度（5 分制）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>考察内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>功能广度</strong></td>
+<td>HTTP/HTTPS/PING、DNS、TCPing、路由、备案、污染、监控、API</td>
+</tr>
+<tr>
+<td><strong>国内节点</strong></td>
+<td>省份/城市粒度、电信/联通/移动覆盖</td>
+</tr>
+<tr>
+<td><strong>全球节点</strong></td>
+<td>海外国家与城市覆盖</td>
+</tr>
+<tr>
+<td><strong>结果呈现</strong></td>
+<td>地图、图表、表格、区域故障定位效率</td>
+</tr>
+<tr>
+<td><strong>免费友好度</strong></td>
+<td>游客次数、去广告、批量是否收费</td>
+</tr>
+<tr>
+<td><strong>上手成本</strong></td>
+<td>打开到出结果几步、界面干扰度</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、总览对比表（2026.07 更新）</h2>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th style="text-align: center;">功能广度</th>
+<th style="text-align: center;">国内节点</th>
+<th style="text-align: center;">全球节点</th>
+<th style="text-align: center;">结果呈现</th>
+<th style="text-align: center;">免费友好</th>
+<th style="text-align: center;">上手成本</th>
+<th>综合适合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SpeedCE</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td>快速巡检、地图、DNS/路由</td>
+</tr>
+<tr>
+<td><strong>ITDOG</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td>持续 Ping、社区口碑</td>
+</tr>
+<tr>
+<td><strong>BOCE</strong></td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>全能运维、企业场景</td>
+</tr>
+<tr>
+<td><strong>17CE</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>老牌测速、历史对比</td>
+</tr>
+<tr>
+<td><strong>VSPING</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>污染/拦截检测</td>
+</tr>
+<tr>
+<td><strong>CESU</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>新兴综合工具站</td>
+</tr>
+<tr>
+<td><strong>站长之家 Ping</strong></td>
+<td style="text-align: center;">★★☆☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★☆☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td>站长生态配套</td>
+</tr>
+<tr>
+<td><strong>Ping.pe</strong></td>
+<td style="text-align: center;">★★☆☆☆</td>
+<td style="text-align: center;">★★☆☆☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td>全球 Ping 速查</td>
+</tr>
+<tr>
+<td><strong>阿里云运维检测</strong></td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td>阿里云用户配套</td>
+</tr>
+<tr>
+<td><strong>PageSpeed</strong></td>
+<td style="text-align: center;">★★☆☆☆*</td>
+<td style="text-align: center;">—</td>
+<td style="text-align: center;">★★★☆☆</td>
+<td style="text-align: center;">★★★★☆</td>
+<td style="text-align: center;">★★★★★</td>
+<td style="text-align: center;">★★★★☆</td>
+<td>页面性能优化</td>
+</tr>
+</tbody>
+</table>
+<p>* PageSpeed 测页面性能，非网络拨测。</p>
+<hr />
+<h2>四、SpeedCE 深度点评（2026.07 重大更新）</h2>
+<p><strong>官网：</strong> https://www.speedce.com<br />
+<strong>中文：</strong> https://speedce.com/?lang=zh-CN</p>
+<h3>产品定位</h3>
+<p>SpeedCE 是<strong>轻量级多节点测速平台</strong>，通过下拉菜单集成六种检测工具，在同一页面完成「中国节点 / 全球节点」双视图地图展示。</p>
+<h3>2026 年 7 月新增能力</h3>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>能力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>TCPing</strong></td>
+<td>指定 TCP 端口连通，适用于禁 Ping 服务器</td>
+</tr>
+<tr>
+<td><strong>DNS</strong></td>
+<td>各节点查询 A/AAAA/CNAME/MX/TXT/NS，解析一致性统计</td>
+</tr>
+<tr>
+<td><strong>路由追踪</strong></td>
+<td>单节点 Traceroute，可选 MTR 丢包/延迟统计</td>
+</tr>
+</tbody>
+</table>
+<p>加上原有 <strong>HTTP、HTTPS、PING</strong>，SpeedCE 已覆盖从 DNS → 网络层 → 传输层 → 应用层的完整排查链路。</p>
+<h3>核心优势</h3>
+<ol>
+<li><strong>双地图呈现</strong> — 中国/全球节点红绿分布，区域故障一眼定位  </li>
+<li><strong>六种工具一页集成</strong> — 下拉切换，无需跳转多个网站  </li>
+<li><strong>全国省级 + 三网筛选</strong> — 精确到「深圳电信通畅、乌鲁木齐联通超时」  </li>
+<li><strong>DNS 一致性面板</strong> — 改 DNS、上 CDN 后的验收利器  </li>
+<li><strong>免费免注册</strong> — 打开即测，支持中文及十余种语言  </li>
+</ol>
+<h3>不足与局限</h3>
+<ul>
+<li>暂无 QQ/微信拦截、ICP 备案、域名污染专项检测（需 BOCE 等）  </li>
+<li>暂无持续 Ping 监控、API 批量任务、历史趋势大盘  </li>
+<li>路由追踪每次仅单节点，需手动切换对比  </li>
+<li>页面有赞助商展示位（干扰度低于部分老牌平台）</li>
+</ul>
+<h3>适合谁？</h3>
+<table>
+<thead>
+<tr>
+<th>用户</th>
+<th>推荐度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>个人站长日常巡检</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>VPS 验线路（含禁 Ping）</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>DNS 切换验收</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>地图对外展示结果</td>
+<td>★★★★★</td>
+</tr>
+<tr>
+<td>路由瓶颈初筛</td>
+<td>★★★★☆</td>
+</tr>
+<tr>
+<td>企业合规全栈运维</td>
+<td>★★★☆☆（需配合 BOCE）</td>
+</tr>
+</tbody>
+</table>
+<h3>横评小结</h3>
+<blockquote>
+<p><strong>2026 年 7 月更新后，SpeedCE 从「轻量三板斧」升级为「地图 + 六工具」综合平台</strong>——仍保持极简上手，但 DNS、TCPing、路由追踪补齐了深度排查短板。在「快 + 看得懂 + 功能够用」这条赛道上竞争力显著增强。</p>
+</blockquote>
+<hr />
+<h2>五、其他工具简评</h2>
+<h3>ITDOG —— 持续 Ping 利器</h3>
+<ul>
+<li>优势：持续 Ping/TCPing、路由/MTR、社区口碑（HostLoc）  </li>
+<li>不足：广告较多、全球视图不如 SpeedCE 直观  </li>
+<li>定位：深度网络工具箱，与 SpeedCE 互补</li>
+</ul>
+<h3>BOCE —— 全能商业化标杆</h3>
+<ul>
+<li>优势：6000+ 节点、污染/拦截/备案、监控 API、2026 MCP 服务  </li>
+<li>不足：游客限制、学习成本高  </li>
+<li>定位：企业级兜底，合规与安全检测首选</li>
+</ul>
+<h3>17CE —— 老牌监控向</h3>
+<ul>
+<li>优势：历史底蕴、趋势分析  </li>
+<li>不足：近年运营波动讨论、界面偏经典  </li>
+<li>定位：老用户留存，新用户可优先试 SpeedCE</li>
+</ul>
+<h3>PageSpeed —— 页面性能（非拨测）</h3>
+<ul>
+<li>与 SpeedCE <strong>互补不竞争</strong>：SpeedCE 看「通不通」，PageSpeed 看「快不快」</li>
+</ul>
+<hr />
+<h2>六、分场景选型指南（2026.07）</h2>
+<table>
+<thead>
+<tr>
+<th>场景</th>
+<th>首选</th>
+<th>理由</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>验 VPS 线路</td>
+<td><strong>SpeedCE</strong></td>
+<td>PING/TCPing + 三网地图</td>
+</tr>
+<tr>
+<td>迁机 / 改 DNS</td>
+<td><strong>SpeedCE</strong></td>
+<td>HTTPS + DNS 一致性</td>
+</tr>
+<tr>
+<td>CDN 回源排查</td>
+<td><strong>SpeedCE</strong></td>
+<td>CDN 域 vs 源站对照</td>
+</tr>
+<tr>
+<td>禁 Ping 验端口</td>
+<td><strong>SpeedCE TCPing</strong></td>
+<td>无需 ICMP</td>
+</tr>
+<tr>
+<td>路由瓶颈定位</td>
+<td><strong>SpeedCE 路由追踪</strong></td>
+<td>MTR 模式</td>
+</tr>
+<tr>
+<td>QQ/微信拦截</td>
+<td><strong>BOCE</strong></td>
+<td>SpeedCE 不覆盖</td>
+</tr>
+<tr>
+<td>7×24 监控告警</td>
+<td><strong>BOCE</strong></td>
+<td>监控任务 + API</td>
+</tr>
+<tr>
+<td>向老板展示结果</td>
+<td><strong>SpeedCE</strong></td>
+<td>地图非技术人员秒懂</td>
+</tr>
+<tr>
+<td>页面代码优化</td>
+<td><strong>PageSpeed</strong></td>
+<td>Core Web Vitals</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、横评结论</h2>
+<p><strong>如果你只能收藏三个链接：</strong></p>
+<ol>
+<li><strong>SpeedCE</strong> — 日常巡检、验 VPS、DNS、路由、地图展示  </li>
+<li><strong>ITDOG</strong> — 持续 Ping、深度网络工具  </li>
+<li><strong>BOCE</strong> — 污染拦截、备案、监控、MCP  </li>
+</ol>
+<p><strong>如果你只能收藏一个：</strong></p>
+<ul>
+<li>要 <strong>快、直观、六工具一页</strong> → <strong>SpeedCE</strong>  </li>
+<li>要 <strong>全和深</strong> → BOCE  </li>
+<li>要 <strong>社区老牌子</strong> → ITDOG  </li>
+</ul>
+<h3>SpeedCE 最终定位（2026.07）</h3>
+<blockquote>
+<p><strong>SpeedCE 不再是「只有三种协议的小清新」，而是「地图可视化 + 六种检测工具」的轻量综合平台</strong>——在 30 秒内判断全国哪里红了，同时能顺手查 DNS、追路由、验端口。</p>
+</blockquote>
+<hr />
+<h2>附录：工具官网速查</h2>
+<table>
+<thead>
+<tr>
+<th>工具</th>
+<th>链接</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SpeedCE</td>
+<td>https://www.speedce.com</td>
+</tr>
+<tr>
+<td>SpeedCE 中文</td>
+<td>https://speedce.com/?lang=zh-CN</td>
+</tr>
+<tr>
+<td>ITDOG</td>
+<td>https://www.itdog.cn</td>
+</tr>
+<tr>
+<td>BOCE</td>
+<td>https://www.boce.com</td>
+</tr>
+<tr>
+<td>PageSpeed</td>
+<td>https://pagespeed.web.dev</td>
+</tr>
+</tbody>
+</table>
+<p><strong>联系 SpeedCE：</strong> speedceads@gmail.com</p>
+<hr />
+<p><em>关键词：2026 网站测速工具推荐、SpeedCE DNS TCPing 路由追踪、ITDOG BOCE 对比、多节点测速横评</em></p></body></html>
