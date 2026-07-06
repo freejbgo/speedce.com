@@ -29,25 +29,31 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://freejbgo.github.io/speedce.com/docs/</loc>
+    <loc>https://freejbgo.github.io/speedce.com/</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
   <url>
-    <loc>https://freejbgo.github.io/speedce.com/docs/complete-guide.html</loc>
+    <loc>https://freejbgo.github.io/speedce.com/complete-guide.html</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://freejbgo.github.io/speedce.com/docs/practical-guide.html</loc>
+    <loc>https://freejbgo.github.io/speedce.com/practical-guide.html</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>
   </url>
   <url>
-    <loc>https://freejbgo.github.io/speedce.com/docs/tool-comparison-2026.html</loc>
+    <loc>https://freejbgo.github.io/speedce.com/tool-comparison-2026.html</loc>
+    <lastmod>2026-07-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+  <url>
+    <loc>https://freejbgo.github.io/speedce.com/home.html</loc>
     <lastmod>2026-07-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.75</priority>

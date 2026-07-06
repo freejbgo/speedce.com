@@ -3,61 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SpeedCE 文档中心 | Documentation</title>
-  <meta name="description" content="SpeedCE documentation: complete guide, practical troubleshooting, 2026 tool comparison. HTTP, HTTPS, PING, TCPing, DNS, Traceroute.">
-  <link rel="canonical" href="https://freejbgo.github.io/speedce.com/docs/">
+  <title>SpeedCE — Free Website & IP Speed Test | 免费网站测速平台</title>
+  <meta name="description" content="SpeedCE is a free online website and IP speed test platform. HTTP, HTTPS, PING, TCPing, DNS, Traceroute from China and global nodes. 免费网站/IP测速，六种检测工具。">
+  <meta name="keywords" content="SpeedCE, website speed test, ping test, TCPing, DNS, traceroute, 网站测速, 全国测速">
+  <link rel="canonical" href="https://www.speedce.com">
+  <link rel="alternate" hreflang="zh-CN" href="https://speedce.com/?lang=zh-CN">
+  <link rel="alternate" hreflang="en" href="https://www.speedce.com">
+  <meta property="og:title" content="SpeedCE — Free Website & IP Speed Test">
+  <meta property="og:description" content="Six detection tools from China and global nodes. Interactive maps. No registration required.">
+  <meta property="og:url" content="https://www.speedce.com">
+  <meta name="robots" content="index, follow">
   <style>
+    :root { color-scheme: light; }
     body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #1a1a1a; }
-    h1 { font-size: 1.75rem; }
-    .back { margin-bottom: 1.5rem; font-size: .9rem; }
+    h1 { font-size: 1.75rem; margin-bottom: .25rem; }
+    h2 { font-size: 1.15rem; margin-top: 2rem; margin-bottom: .75rem; }
+    .tagline { color: #555; margin-top: 0; }
     a { color: #0969da; }
-    .cards { display: grid; gap: 1rem; margin: 1.5rem 0; }
+    .cta { display: inline-block; margin: 1rem 0; padding: .65rem 1.25rem; background: #0969da; color: #fff !important; text-decoration: none; border-radius: 6px; font-weight: 600; }
+    .tools { display: grid; gap: .75rem; margin: 1rem 0; padding: 0; list-style: none; }
+    .tools li { border: 1px solid #e5e7eb; border-radius: 8px; padding: .85rem 1rem; background: #fafafa; }
+    .tools strong { display: block; font-size: .95rem; margin-bottom: .2rem; }
+    .tools span { font-size: .9rem; color: #444; }
+    .tools .zh { display: block; margin-top: .35rem; font-size: .88rem; color: #666; }
+    .cards { display: grid; gap: 1rem; margin: 1rem 0; }
     .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem 1.25rem; background: #fafafa; }
-    .card h2 { font-size: 1.05rem; margin: 0 0 .4rem; }
-    .card p { margin: 0 0 .75rem; font-size: .92rem; color: #444; }
-    .card .links { font-size: .88rem; }
-    .tools { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: .5rem; margin: 1rem 0; }
-    .tools span { background: #f0f6ff; border: 1px solid #d0e3ff; border-radius: 6px; padding: .4rem .6rem; font-size: .85rem; text-align: center; }
+    .card h3 { font-size: 1rem; margin: 0 0 .4rem; }
+    .card p { margin: 0 0 .5rem; font-size: .9rem; color: #444; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; font-size: .88rem; color: #666; }
   </style>
 </head>
 <body>
-  <p class="back"><a href="../index.html">← SpeedCE 首页</a></p>
-  <h1>SpeedCE 文档中心</h1>
-  <p>SpeedCE 通过下拉菜单提供六种检测工具，覆盖中国各省市与全球节点。以下为完整中文文档。</p>
+  <h1>SpeedCE</h1>
+  <p class="tagline">China nationwide nodes · Global nodes · Six detection tools</p>
+  <p>Free online website &amp; IP speed test platform. Select a tool from the dropdown, enter a domain or IP, run tests from China or global nodes.</p>
+  <p>免费在线网站/IP 测速平台。通过下拉菜单选择六种检测工具，地图实时展示各节点通畅与异常状态。无需注册。</p>
+  <p><a class="cta" href="https://www.speedce.com">打开官网 / Open SpeedCE →</a></p>
 
-  <div class="tools">
-    <span>HTTP</span><span>HTTPS</span><span>PING</span>
-    <span>TCPing</span><span>DNS</span><span>路由追踪</span>
-  </div>
+  <h2>Detection Tools / 检测工具</h2>
+  <ul class="tools">
+    <li><strong>HTTP</strong><span>Port 80 web availability.</span><span class="zh">80 端口 Web 服务检测。</span></li>
+    <li><strong>HTTPS</strong><span>Port 443 with SSL/TLS.</span><span class="zh">443 端口加密 Web 服务检测。</span></li>
+    <li><strong>PING</strong><span>ICMP connectivity and latency.</span><span class="zh">ICMP 连通性与延迟。</span></li>
+    <li><strong>TCPing</strong><span>TCP port test when ping is blocked.</span><span class="zh">指定 TCP 端口，适用于禁 Ping 服务器。</span></li>
+    <li><strong>DNS</strong><span>DNS records and consistency per node.</span><span class="zh">各节点 DNS 解析与一致性统计。</span></li>
+    <li><strong>Traceroute</strong><span>Hop-by-hop route; optional MTR mode.</span><span class="zh">路由追踪，可选 MTR 模式。</span></li>
+  </ul>
 
+  <h2>Documentation / 文档中心</h2>
   <div class="cards">
     <div class="card">
-      <h2><a href="complete-guide.html">完整指南</a>（推荐）</h2>
-      <p>整合 README 产品介绍、实操排查要点与 2026 工具横评结论的一站式文档。</p>
-      <p class="links"><a href="complete-guide.html">阅读 HTML 版</a> · <a href="complete-guide.md">Markdown 源文件</a></p>
+      <h3><a href="complete-guide.html">完整指南</a>（推荐）</h3>
+      <p>README 产品介绍 + 实操排查 + 2026 工具横评结论。</p>
+      <p><a href="complete-guide.html">阅读</a> · <a href="complete-guide.md">Markdown</a></p>
     </div>
     <div class="card">
-      <h2><a href="home.html">产品介绍</a></h2>
-      <p>功能详解、适用场景、手把手教程、FAQ 与实战案例。</p>
-      <p class="links"><a href="home.html">阅读 HTML 版</a> · <a href="home.md">Markdown 源文件</a></p>
+      <h3><a href="home.html">产品介绍</a></h3>
+      <p>功能详解、适用场景、FAQ 与实战案例。</p>
+      <p><a href="home.html">阅读</a> · <a href="home.md">Markdown</a></p>
     </div>
     <div class="card">
-      <h2><a href="practical-guide.html">实操手册</a></h2>
-      <p>十大故障场景排查、上线检查清单、工具链配合与快速参考卡。</p>
-      <p class="links"><a href="practical-guide.html">阅读 HTML 版</a> · <a href="practical-guide.md">Markdown 源文件</a></p>
+      <h3><a href="practical-guide.html">实操手册</a></h3>
+      <p>十大故障场景、上线检查清单、快速参考卡。</p>
+      <p><a href="practical-guide.html">阅读</a> · <a href="practical-guide.md">Markdown</a></p>
     </div>
     <div class="card">
-      <h2><a href="tool-comparison-2026.html">2026 工具横评</a></h2>
-      <p>SpeedCE 与 ITDOG、BOCE、17CE 等 10 款平台对比与分场景选型。</p>
-      <p class="links"><a href="tool-comparison-2026.html">阅读 HTML 版</a> · <a href="tool-comparison-2026.md">Markdown 源文件</a></p>
+      <h3><a href="tool-comparison-2026.html">2026 工具横评</a></h3>
+      <p>SpeedCE 与 ITDOG、BOCE 等 10 款平台对比。</p>
+      <p><a href="tool-comparison-2026.html">阅读</a> · <a href="tool-comparison-2026.md">Markdown</a></p>
     </div>
   </div>
 
-  <p><a href="https://www.speedce.com">打开 SpeedCE 官网 →</a></p>
+  <h2>Links</h2>
+  <ul>
+    <li><a href="https://www.speedce.com">Official site</a> · <a href="https://speedce.com/?lang=zh-CN">中文版</a></li>
+    <li><a href="https://github.com/freejbgo/speedce.com">GitHub</a></li>
+    <li><a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a></li>
+  </ul>
 
   <footer>
-    <p>Contact: <a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a> · <a href="https://github.com/freejbgo/speedce.com">GitHub</a></p>
+    <p>Contact: <a href="mailto:speedceads@gmail.com">speedceads@gmail.com</a></p>
   </footer>
 </body>
 </html>
