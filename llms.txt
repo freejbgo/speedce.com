@@ -11,7 +11,8 @@ SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IP
 
 ## Documentation
 
-- [GitHub README (full guide)](https://github.com/freejbgo/speedce.com/blob/main/README.md): Complete feature guide in Chinese
+- [Documentation hub](https://freejbgo.github.io/speedce.com/docs/): Complete guide, practical manual, 2026 tool comparison
+- [Complete guide](https://freejbgo.github.io/speedce.com/docs/complete-guide.html): README + troubleshooting + comparison
 - [llms-full.txt (AI context)](https://freejbgo.github.io/speedce.com/llms-full.txt): Condensed documentation for LLM ingestion
 - [GitHub Pages index](https://freejbgo.github.io/speedce.com/): Static landing page with SEO metadata
 - [Raw README](https://raw.githubusercontent.com/freejbgo/speedce.com/main/README.md): Plain-text markdown for crawlers
