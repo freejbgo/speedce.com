@@ -110,6 +110,7 @@ Traceroute detail panel: hop list, RTT, optional MTR loss/latency columns.
 
 - Website: https://www.speedce.com
 - Chinese: https://speedce.com/?lang=zh-CN
+- Forum: https://bbs.speedce.com
 - GitHub: https://github.com/freejbgo/speedce.com
 - README: https://github.com/freejbgo/speedce.com/blob/main/README.md
 
@@ -117,4 +118,4 @@ Traceroute detail panel: hop list, RTT, optional MTR loss/latency columns.
 
 ## 中文摘要
 
-SpeedCE 是免费在线网站/IP 测速平台，通过下拉菜单提供 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测工具，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态；DNS 模式汇总各节点解析一致性，路由追踪支持 MTR 丢包统计。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，联系：speedceads@gmail.com
+SpeedCE 是免费在线网站/IP 测速平台，通过下拉菜单提供 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测工具，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态；DNS 模式汇总各节点解析一致性，路由追踪支持 MTR 丢包统计。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，论坛：https://bbs.speedce.com ，联系：speedceads@gmail.com
