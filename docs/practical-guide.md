@@ -1,7 +1,7 @@
 # 网站慢、打不开、部分用户访问异常？站长多节点测速实战手册（SpeedCE 实操版）
 
-> 工具地址：https://www.speedce.com  
-> 中文界面：https://speedce.com/?lang=zh-CN  
+> 工具地址：https://www.speedce.com（默认简体中文）  
+> English：https://speedce.com/?lang=en  
 > 联系：speedceads@gmail.com  
 > 更新时间：2026 年 7 月
 
@@ -70,7 +70,7 @@ DNS 模式从各检测节点查询域名记录（A / AAAA / CNAME / MX / TXT / N
 
 ## 第二章：SpeedCE 五分钟上手
 
-打开 https://speedce.com/?lang=zh-CN ，跟着做一遍。
+打开 https://www.speedce.com ，跟着做一遍。
 
 ### 步骤 1：选范围
 
@@ -214,7 +214,7 @@ cdn.example.com
 - [ ] 证书有效期 > 30 天
 - [ ] 地图截图已存档
 
-**工具：** https://speedce.com/?lang=zh-CN
+**工具：** https://www.speedce.com
 
 ---
 
@@ -234,7 +234,7 @@ cdn.example.com
 │  SpeedCE 快速参考（2026.07）                       │
 ├──────────────────────────────────────────────────┤
 │  官网    https://www.speedce.com                  │
-│  中文    https://speedce.com/?lang=zh-CN          │
+│  英文    https://speedce.com/?lang=en             │
 │  论坛    https://bbs.speedce.com                  │
 ├──────────────────────────────────────────────────┤
 │  验 VPS 线路     PING + 中国节点 + 三网筛选        │

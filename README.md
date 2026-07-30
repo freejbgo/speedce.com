@@ -1,7 +1,7 @@
 # SpeedCE：覆盖中国各省市与全球节点的免费网站测速平台——站长与运维人员的实用新选择
 
-> 官网：https://www.speedce.com  
-> 中文版：https://speedce.com/?lang=zh-CN  
+> 官网：https://www.speedce.com（默认简体中文）  
+> English：https://speedce.com/?lang=en  
 > 联系邮箱：speedceads@gmail.com
 
 **English:** [SpeedCE](https://www.speedce.com) is a free website & IP speed test platform with six tools—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—from China provincial nodes and global nodes. Interactive maps show per-node OK/Failed status; DNS and Traceroute include detailed result panels. No signup required. | [AI index (llms.txt)](./llms.txt) | [Full AI context (llms-full.txt)](./llms-full.txt)
@@ -214,8 +214,8 @@ SpeedCE 内置国际化（i18n）系统，支持以下语言界面（通过右�
 
 | 语言 | 访问方式 |
 |------|----------|
-| 简体中文 | https://speedce.com/?lang=zh-CN |
-| English | https://speedce.com/ |
+| 简体中文 | https://www.speedce.com（默认） |
+| English | https://speedce.com/?lang=en |
 | Français | `?lang=fr` |
 | Tiếng Việt | `?lang=vi` |
 | ไทย | `?lang=th` |
@@ -320,7 +320,7 @@ SpeedCE 内置国际化（i18n）系统，支持以下语言界面（通过右�
 
 ### 第一步：打开官网
 
-访问 **https://www.speedce.com**，或中文版 **https://speedce.com/?lang=zh-CN**。
+访问 **https://www.speedce.com**（默认简体中文）。
 
 ### 第二步：选择测试范围
 
@@ -577,9 +577,9 @@ DNS 模式从各检测节点向配置的递归 DNS 发起查询，返回记录�
 
 PageSpeed、GTmetrix 侧重**页面性能评分、Core Web Vitals、前端优化建议**；SpeedCE 侧重**多地区网络连通性与延迟**。两者互补：一个回答「页面优化得好不好」，一个回答「各地用户能不能访问、快不快」。
 
-### Q8：中文界面如何切换？
+### Q8：如何切换界面语言？
 
-访问 https://speedce.com/?lang=zh-CN ，或点击页面右上角语言选择器，选择「简体中文」。
+官网默认简体中文。需要英文界面可访问 https://speedce.com/?lang=en，或点击页面右上角语言选择器切换。
 
 ### Q9：如何联系 SpeedCE 团队？
 
@@ -623,9 +623,9 @@ DNS 查询的本质是解析域名到记录值，输入 IP 地址没有查询意
 
 ## 十、立即体验
 
-**官网：** https://www.speedce.com
+**官网：** https://www.speedce.com（默认简体中文）
 
-**中文版：** https://speedce.com/?lang=zh-CN
+**英文版：** https://speedce.com/?lang=en
 
 **社区论坛：** [SpeedCE 论坛](https://bbs.speedce.com) — 测速问题交流、建站经验分享
 

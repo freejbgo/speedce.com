@@ -55,8 +55,7 @@
 
 ## 四、SpeedCE 深度点评（2026.07 重大更新）
 
-**官网：** https://www.speedce.com  
-**中文：** https://speedce.com/?lang=zh-CN
+**官网：** https://www.speedce.com（默认简体中文）
 
 ### 产品定位
 
@@ -171,7 +170,7 @@ SpeedCE 是**轻量级多节点测速平台**，通过下拉菜单集成六种�
 | 工具 | 链接 |
 |------|------|
 | SpeedCE | https://www.speedce.com |
-| SpeedCE 中文 | https://speedce.com/?lang=zh-CN |
+| SpeedCE English | https://speedce.com/?lang=en |
 | SpeedCE 论坛 | https://bbs.speedce.com |
 | ITDOG | https://www.itdog.cn |
 | BOCE | https://www.boce.com |
