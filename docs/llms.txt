@@ -31,6 +31,7 @@ SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IP
 ## Contact
 
 - Email: speedceads@gmail.com
+- Forum: https://bbs.speedce.com
 - GitHub: https://github.com/freejbgo/speedce.com
 
 ## Optional
