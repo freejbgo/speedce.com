@@ -4,19 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SpeedCE — Free Website & IP Speed Test | 免费网站测速平台</title>
-  <meta name="description" content="SpeedCE is a free online website and IP speed test platform. HTTP, HTTPS, PING, TCPing, DNS, Traceroute from China and global nodes. 免费网站/IP测速，六种检测工具。">
-  <meta name="keywords" content="SpeedCE, website speed test, ping test, TCPing, DNS, traceroute, 网站测速, 全国测速">
-  <link rel="canonical" href="https://www.speedce.com">
+  <meta name="description" content="SpeedCE is a free online website and IP speed test platform. HTTP, HTTPS, PING, TCPing, DNS, Traceroute from China and global nodes. Interactive maps. 免费网站/IP测速，六种检测工具，覆盖中国各省市与全球节点。">
+  <meta name="keywords" content="SpeedCE, website speed test, ping test, HTTP test, HTTPS test, TCPing, DNS lookup, traceroute, 网站测速, 全国测速, 全球测速, DNS查询, 路由追踪">
+  <link rel="canonical" href="https://freejbgo.github.io/speedce.com/">
   <link rel="alternate" hreflang="zh-CN" href="https://www.speedce.com">
   <link rel="alternate" hreflang="en" href="https://speedce.com/?lang=en">
   <meta property="og:title" content="SpeedCE — Free Website & IP Speed Test">
-  <meta property="og:description" content="Six detection tools from China and global nodes. Interactive maps. No registration required.">
-  <meta property="og:url" content="https://www.speedce.com">
+  <meta property="og:description" content="Test HTTP, HTTPS, PING, TCPing, DNS, Traceroute from China provincial nodes and global nodes. Interactive maps. No registration required.">
+  <meta property="og:url" content="https://freejbgo.github.io/speedce.com/">
+  <meta property="og:type" content="website">
   <meta name="robots" content="index, follow">
   <link rel="sitemap" type="application/xml" href="sitemap.xml">
+  <link rel="author" href="llms.txt">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "SpeedCE",
+    "url": "https://www.speedce.com",
+    "description": "Free multi-node website and IP speed test platform with HTTP, HTTPS, PING, TCPing, DNS, and Traceroute from China and global nodes.",
+    "applicationCategory": "UtilitiesApplication",
+    "operatingSystem": "Any",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "featureList": [
+      "HTTP speed test",
+      "HTTPS speed test",
+      "PING test",
+      "TCPing port test",
+      "DNS lookup",
+      "Traceroute with MTR mode",
+      "China provincial nodes",
+      "Global nodes map"
+    ]
+  }
+  </script>
   <style>
     :root { color-scheme: light; }
-    body { font-family: system-ui, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #1a1a1a; }
+    body { font-family: system-ui, -apple-system, sans-serif; max-width: 760px; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #1a1a1a; }
     h1 { font-size: 1.75rem; margin-bottom: .25rem; }
     h2 { font-size: 1.15rem; margin-top: 2rem; margin-bottom: .75rem; }
     .tagline { color: #555; margin-top: 0; }
@@ -31,24 +55,25 @@
     .card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 1rem 1.25rem; background: #fafafa; }
     .card h3 { font-size: 1rem; margin: 0 0 .4rem; }
     .card p { margin: 0 0 .5rem; font-size: .9rem; color: #444; }
+    ul.links { padding-left: 1.2rem; }
     footer { margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #e5e7eb; font-size: .88rem; color: #666; }
   </style>
 </head>
 <body>
   <h1>SpeedCE</h1>
   <p class="tagline">China nationwide nodes · Global nodes · Six detection tools</p>
-  <p>Free online website &amp; IP speed test platform. Select a tool from the dropdown, enter a domain or IP, run tests from China or global nodes.</p>
-  <p>免费在线网站/IP 测速平台。通过下拉菜单选择六种检测工具，地图实时展示各节点通畅与异常状态。无需注册。</p>
-  <p><a class="cta" href="https://www.speedce.com">打开官网 / Open SpeedCE →</a></p>
+  <p>Free online website &amp; IP speed test platform for webmasters and DevOps. Select a tool from the dropdown, enter a domain or IP, and run tests from China provincial nodes or global nodes. Results appear on interactive maps.</p>
+  <p>免费在线网站/IP 测速平台。通过下拉菜单选择检测工具，输入域名或 IP，在中国各省市或全球节点发起检测，地图实时展示通畅、异常、检测中与等待状态。官网默认简体中文，无需注册，打开即用。</p>
+  <p><a class="cta" href="https://www.speedce.com">打开官网（默认中文）/ Open SpeedCE →</a></p>
 
   <h2>Detection Tools / 检测工具</h2>
   <ul class="tools">
-    <li><strong>HTTP</strong><span>Port 80 web availability.</span><span class="zh">80 端口 Web 服务检测。</span></li>
-    <li><strong>HTTPS</strong><span>Port 443 with SSL/TLS.</span><span class="zh">443 端口加密 Web 服务检测。</span></li>
-    <li><strong>PING</strong><span>ICMP connectivity and latency.</span><span class="zh">ICMP 连通性与延迟。</span></li>
-    <li><strong>TCPing</strong><span>TCP port test when ping is blocked.</span><span class="zh">指定 TCP 端口，适用于禁 Ping 服务器。</span></li>
-    <li><strong>DNS</strong><span>DNS records and consistency per node.</span><span class="zh">各节点 DNS 解析与一致性统计。</span></li>
-    <li><strong>Traceroute</strong><span>Hop-by-hop route; optional MTR mode.</span><span class="zh">路由追踪，可选 MTR 模式。</span></li>
+    <li><strong>HTTP</strong><span>Port 80 web availability and response time.</span><span class="zh">80 端口 Web 服务可用性与响应速度检测。</span></li>
+    <li><strong>HTTPS</strong><span>Port 443 with SSL/TLS handshake — closest to real browser access.</span><span class="zh">443 端口加密 Web 服务检测，含 SSL/TLS 握手过程。</span></li>
+    <li><strong>PING</strong><span>ICMP connectivity and latency from each probe node.</span><span class="zh">ICMP 连通性与网络延迟检测。</span></li>
+    <li><strong>TCPing</strong><span>TCP port connectivity with custom port — works when ping is blocked.</span><span class="zh">指定 TCP 端口连通检测，适用于禁 Ping 的服务器。</span></li>
+    <li><strong>DNS</strong><span>Query A, AAAA, CNAME, MX, TXT, NS records from each node (domain only).</span><span class="zh">从各节点查询 DNS 记录，支持解析一致性统计（仅支持域名）。</span></li>
+    <li><strong>Traceroute</strong><span>Hop-by-hop route from a selected node; optional MTR mode for loss and latency stats.</span><span class="zh">从所选节点进行路由追踪，可选 MTR 模式查看丢包与延迟统计。</span></li>
   </ul>
 
   <h2>Documentation / 文档中心</h2>
@@ -73,13 +98,20 @@
       <p>SpeedCE 与 ITDOG、BOCE 等 10 款平台对比。</p>
       <p><a href="tool-comparison-2026.html">阅读</a> · <a href="tool-comparison-2026.md">Markdown</a></p>
     </div>
+    <div class="card">
+      <h3><a href="https://bbs.speedce.com">SpeedCE 论坛</a></h3>
+      <p>测速问题交流、建站经验分享、使用反馈。</p>
+      <p><a href="https://bbs.speedce.com">进入论坛</a></p>
+    </div>
   </div>
 
   <h2>Links</h2>
-  <ul>
-    <li><a href="https://www.speedce.com">官网</a> · <a href="https://speedce.com/?lang=en">English</a> · <a href="https://bbs.speedce.com">论坛</a></li>
-    <li><a href="https://github.com/freejbgo/speedce.com">GitHub</a></li>
+  <ul class="links">
+    <li><a href="https://www.speedce.com">官网（简体中文）</a> · <a href="https://speedce.com/?lang=en">English</a></li>
+    <li><a href="https://bbs.speedce.com">SpeedCE 论坛</a></li>
+    <li><a href="https://github.com/freejbgo/speedce.com">GitHub repository</a></li>
     <li><a href="llms.txt">llms.txt</a> · <a href="llms-full.txt">llms-full.txt</a></li>
+    <li><a href="sitemap.xml">sitemap.xml</a> · <a href="robots.txt">robots.txt</a></li>
   </ul>
 
   <footer>

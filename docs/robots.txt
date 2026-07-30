@@ -1,0 +1,35 @@
+# SpeedCE — allow all crawlers
+# Official site: https://www.speedce.com
+# GitHub Pages: https://freejbgo.github.io/speedce.com/
+# GitHub: https://github.com/freejbgo/speedce.com
+
+User-agent: *
+Allow: /
+
+# AI crawlers (explicitly welcome)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://freejbgo.github.io/speedce.com/sitemap.xml
+Sitemap: https://www.speedce.com/sitemap.xml
