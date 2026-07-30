@@ -1,6 +1,6 @@
 # SpeedCE — Free Website & IP Speed Test Platform
 
-> SpeedCE is a free online speed test tool for webmasters, developers, and network operators. Test domains, subdomains, IPv4/IPv6 addresses via six tools—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—from China provincial nodes and global nodes. Interactive maps show OK/Failed/Testing/Pending status per node. DNS and Traceroute include detailed result panels. No registration, no paywall. Official: https://www.speedce.com | Chinese: https://speedce.com/?lang=zh-CN | Contact: speedceads@gmail.com
+> SpeedCE is a free online speed test tool for webmasters, developers, and network operators. Test domains, subdomains, IPv4/IPv6 addresses via six tools—HTTP, HTTPS, PING, TCPing, DNS, and Traceroute—from China provincial nodes and global nodes. Interactive maps show OK/Failed/Testing/Pending status per node. DNS and Traceroute include detailed result panels. No registration, no paywall. Official: https://www.speedce.com (Chinese default) | English: https://speedce.com/?lang=en | Contact: speedceads@gmail.com
 
 ---
 
@@ -53,7 +53,7 @@ Free. No registration required. Core speed test features have no paywall.
 
 ## How to Use
 
-1. Open https://www.speedce.com (or Chinese: https://speedce.com/?lang=zh-CN)
+1. Open https://www.speedce.com (Chinese default; English: https://speedce.com/?lang=en)
 2. Select scope: **China nodes** or **Global nodes**
 3. Select tool from dropdown: HTTP, HTTPS, PING, TCPing, DNS, or Traceroute
 4. For TCPing: enter port; for DNS: choose record type; for Traceroute: select probe node (optional MTR mode)
@@ -108,8 +108,8 @@ Traceroute detail panel: hop list, RTT, optional MTR loss/latency columns.
 
 ## Links
 
-- Website: https://www.speedce.com
-- Chinese: https://speedce.com/?lang=zh-CN
+- Website: https://www.speedce.com (Chinese default)
+- English: https://speedce.com/?lang=en
 - GitHub: https://github.com/freejbgo/speedce.com
 - README: https://github.com/freejbgo/speedce.com/blob/main/README.md
 
@@ -117,4 +117,4 @@ Traceroute detail panel: hop list, RTT, optional MTR loss/latency columns.
 
 ## 中文摘要
 
-SpeedCE 是免费在线网站/IP 测速平台，通过下拉菜单提供 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测工具，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态；DNS 模式汇总各节点解析一致性，路由追踪支持 MTR 丢包统计。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com ，中文版：https://speedce.com/?lang=zh-CN ，联系：speedceads@gmail.com
+SpeedCE 是免费在线网站/IP 测速平台，通过下拉菜单提供 HTTP、HTTPS、PING、TCPing、DNS、路由追踪六种检测工具，覆盖中国各省市及全球节点。输入域名或 IP 后，在中国节点地图或全球节点地图上实时查看各检测点的通畅、异常、检测中、等待状态；DNS 模式汇总各节点解析一致性，路由追踪支持 MTR 丢包统计。面向站长、VPS 玩家、企业运维、开发者与跨境电商团队。官网：https://www.speedce.com（默认简体中文），英文版：https://speedce.com/?lang=en，联系：speedceads@gmail.com

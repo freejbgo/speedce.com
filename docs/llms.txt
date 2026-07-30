@@ -6,8 +6,8 @@ SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IP
 
 ## Official Site
 
-- [SpeedCE Homepage](https://www.speedce.com): English default interface
-- [SpeedCE 中文版](https://speedce.com/?lang=zh-CN): Simplified Chinese interface
+- [SpeedCE 官网](https://www.speedce.com): 简体中文默认界面
+- [SpeedCE English](https://speedce.com/?lang=en): English interface
 
 ## Documentation
 
@@ -25,7 +25,7 @@ SpeedCE（测速CE）面向站长与运维人员，支持域名、子域名、IP
 - [TCPing test](https://www.speedce.com): TCP port connectivity (custom port; works when ping is blocked)
 - [DNS lookup](https://www.speedce.com): Query A/AAAA/CNAME/MX/TXT/NS records from each node (domain only)
 - [Traceroute](https://www.speedce.com): Hop-by-hop route from selected node; optional MTR mode
-- [China nodes map](https://speedce.com/?lang=zh-CN): Provincial and city-level nodes across China (Telecom/Unicom/Mobile)
+- [China nodes map](https://www.speedce.com): Provincial and city-level nodes across China (Telecom/Unicom/Mobile)
 - [Global nodes map](https://www.speedce.com): Nodes in North America, Europe, Asia-Pacific, Middle East, Africa, South America
 
 ## Contact
