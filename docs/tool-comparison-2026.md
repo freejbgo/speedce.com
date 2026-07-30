@@ -172,11 +172,12 @@ SpeedCE 是**轻量级多节点测速平台**，通过下拉菜单集成六种�
 |------|------|
 | SpeedCE | https://www.speedce.com |
 | SpeedCE 中文 | https://speedce.com/?lang=zh-CN |
+| SpeedCE 论坛 | https://bbs.speedce.com |
 | ITDOG | https://www.itdog.cn |
 | BOCE | https://www.boce.com |
 | PageSpeed | https://pagespeed.web.dev |
 
-**联系 SpeedCE：** speedceads@gmail.com
+**联系 SpeedCE：** speedceads@gmail.com · [官方论坛](https://bbs.speedce.com)
 
 ---
 

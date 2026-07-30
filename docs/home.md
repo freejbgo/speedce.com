@@ -627,12 +627,14 @@ DNS 查询的本质是解析域名到记录值，输入 IP 地址没有查询意
 
 **中文版：** https://speedce.com/?lang=zh-CN
 
+**社区论坛：** [SpeedCE 论坛](https://bbs.speedce.com) — 测速问题交流、建站经验分享
+
 **推荐收藏方式：**
 
 - 浏览器书签（Ctrl + D）；
 - 发给团队成员的运维文档；
 - 写入你的「建站检查清单」；
-- 在 HostLoc、博客、导航站介绍中分享给更多站长。
+- 在 [SpeedCE 论坛](https://bbs.speedce.com) 交流测速心得，或在博客、导航站介绍中分享给更多站长。
 
 ---
 
@@ -652,4 +654,4 @@ DNS 查询的本质是解析域名到记录值，输入 IP 地址没有查询意
 
 ---
 
-*本文基于 SpeedCE 官网公开功能撰写，适用于 SEO 发布、导航站投稿、HostLoc 论坛分享、公众号/博客转载。转载时请保留官网链接 https://www.speedce.com 。*
+*本文基于 SpeedCE 官网公开功能撰写，适用于 SEO 发布、导航站投稿、[SpeedCE 论坛](https://bbs.speedce.com) 讨论、公众号/博客转载。转载时请保留官网链接 https://www.speedce.com 。*

@@ -235,6 +235,7 @@ cdn.example.com
 ├──────────────────────────────────────────────────┤
 │  官网    https://www.speedce.com                  │
 │  中文    https://speedce.com/?lang=zh-CN          │
+│  论坛    https://bbs.speedce.com                  │
 ├──────────────────────────────────────────────────┤
 │  验 VPS 线路     PING + 中国节点 + 三网筛选        │
 │  禁 Ping 验端口  TCPing + 443 + 中国节点           │
@@ -250,4 +251,4 @@ cdn.example.com
 
 ---
 
-*本文档为 SpeedCE 实战推广文，适用于 SEO 长尾词「网站打不开怎么办」「在线测速教程」「VPS 线路测试」等场景。转载请注明出处与官网链接。*
+*本文档为 SpeedCE 实战推广文，适用于 SEO 长尾词「网站打不开怎么办」「在线测速教程」「VPS 线路测试」等场景。转载请注明出处与官网链接。有测速疑问欢迎在 [SpeedCE 论坛](https://bbs.speedce.com) 交流。*
